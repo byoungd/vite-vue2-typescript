@@ -14,18 +14,17 @@ Vite Vue2 typescript starter template using composition-api
 
 ### Plugins
 
-- [Vue Router](https://github.com/vuejs/vue-router)
+- [vue/compositon-api](https://github.com/vuejs/composition-api) Composition API plugin for Vue 2
+
+- [`VueUse`](https://github.com/antfu/vueuse) - collection of useful composition APIs
 
 - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based
   routing
 
-- [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) -
-  layouts for pages
-
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-
-- [vite-plugin-vue-layouts](https://github.com/anncwb/vite-plugin-style-import) A plug-in
+- [`vite-plugin-vue-layouts`](https://github.com/anncwb/vite-plugin-style-import) A plug-in
   that imports component library styles on demand
+
+- [`vue2-helper`](https://github.com/ambit-tsai/vue2-helpers) - A util package to use Vue 2 with Composition API easily
 
 ### Thanks
 
