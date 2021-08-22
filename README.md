@@ -10,7 +10,9 @@ Vite Vue2 typescript starter template using composition-api
 
 - 📑 [Layout system](./src/layouts)
 
-- 🦾 TypeScript, of course
+- 🎨 [Commitlint](./husky)
+
+- 🔥 TypeScript, of course
 
 ### Plugins
 
@@ -27,6 +29,17 @@ Vite Vue2 typescript starter template using composition-api
   that imports component library styles on demand
 
 - [`vue2-helper`](https://github.com/ambit-tsai/vue2-helpers) - A util package to use Vue 2 with Composition API easily
+
+
+## Usage
+
+### Development
+
+Just run and visit http://localhost:3003
+
+```bash
+yarn dev
+```
 
 ### Thanks
 
