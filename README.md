@@ -16,7 +16,7 @@ Vite Vue2 typescript starter template using composition-api
 
 ### Plugins
 
-- [vue/compositon-api](https://github.com/vuejs/composition-api) Composition API plugin for Vue 2
+- [`vue/compositon-api`](https://github.com/vuejs/composition-api) Composition API plugin for Vue 2
 
 - [`VueUse`](https://github.com/antfu/vueuse) - collection of useful composition APIs
 
@@ -40,6 +40,16 @@ Just run and visit http://localhost:3003
 ```bash
 yarn dev
 ```
+
+## Commit lint
+
+This repo use `commitizen` , if run `git cz` has no effect, you might need to install commitizen global as `yarn add global commitizen` or `npm i -g commitizen`
+
+then use `git cz` to add commit information.
+
+At lint staged it will trigger eslint auto fix and use `pretty-quick` to format files.
+
+And enjoy!
 
 ### Thanks
 
