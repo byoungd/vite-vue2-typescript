@@ -3,7 +3,12 @@ import * as path from 'path'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
 import { createVuePlugin } from 'vite-plugin-vue2'
-import styleImport from 'vite-plugin-style-import'
+import ScriptSetup from 'vue2-script-setup-transform/vite-plugin'
+import Inspect from 'vite-plugin-inspect'
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
+import ViteComponents, { ElementUiResolver } from 'vite-plugin-components'
+import WindiCSS from 'vite-plugin-windicss'
 // @see https://cn.vitejs.dev/config/
 export default ({ command, mode }) => {
   let rollupOptions = {}
@@ -55,22 +60,6 @@ export default ({ command, mode }) => {
     },
     esbuild,
     plugins: [
-      // 按需载入 Element Plus
-      styleImport({
-        libs: [
-          {
-            libraryName: 'element-ui',
-            esModule: true,
-            ensureStyleFile: true,
-            resolveStyle: (name) => {
-              return `element-ui/lib/theme-chalk/${name}.css`
-            },
-            resolveComponent: (name) => {
-              return `element-ui/lib/${name}`
-            },
-          },
-        ],
-      }),
       createVuePlugin({
         jsx: true,
         vueTemplateOptions: {
@@ -79,6 +68,15 @@ export default ({ command, mode }) => {
           },
         },
       }),
+      PkgConfig(),
+      OptimizationPersist(),
+      ViteComponents({
+        globalComponentsDeclaration: true,
+        customComponentResolvers: [ElementUiResolver()],
+      }),
+      Inspect(),
+      // @ts-ignore
+      ScriptSetup(),
       Layouts({
         layoutsDir: 'src/layouts',
       }),
@@ -91,13 +89,10 @@ export default ({ command, mode }) => {
         replaceSquareBrackets: true,
         nuxtStyle: true,
       }),
+      WindiCSS(),
     ],
     css: {
       preprocessorOptions: {},
-    },
-    optimizeDeps: {
-      include: ['vue', 'vue-router', '@vueuse/core'],
-      exclude: ['vue-demi'],
     },
   }
 }

@@ -15,11 +15,14 @@
     "commitlint-config-cz": "^0.13.2",
     "core-js": "^3.11.1",
     "element-ui": "^2.15.5",
+    "vite-plugin-windicss": "^1.2.7",
     "vue": "^2.6.12",
     "vue-demi": "^0.7.5",
+    "vue-global-api": "^0.4.1",
     "vue-router": "^3.5.1",
     "vue2-helpers": "^1.1.3",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "windicss": "^3.1.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -29,6 +32,7 @@
     "@vue/compiler-sfc": "^3.2.4",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/runtime-dom": "^3.2.4",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
@@ -40,12 +44,16 @@
     "pretty-quick": "^3.1.1",
     "typescript": "^4.3.5",
     "vite": "^2.2.3",
-    "vite-plugin-components": "^0.8.4",
+    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-inspect": "^0.2.2",
+    "vite-plugin-optimize-persist": "^0.0.5",
+    "vite-plugin-package-config": "^0.0.3",
     "vite-plugin-pages": "^0.17.4",
     "vite-plugin-style-import": "^1.1.1",
     "vite-plugin-vue-layouts": "^0.3.1",
     "vite-plugin-vue2": "^1.4.4",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vue2-script-setup-transform": "^0.3.4"
   },
   "lint-staged": {
     "**/**.{js,json,vue,ts}": [
@@ -64,6 +72,23 @@
     },
     "cz-customizable": {
       "config": "./.cz-config.js"
+    }
+  },
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "@vue/composition-api",
+        "element-ui",
+        "element-ui/lib/button",
+        "element-ui/lib/menu",
+        "element-ui/lib/menu-item",
+        "element-ui/lib/tag",
+        "vue",
+        "vue-global-api",
+        "vue-router",
+        "vue2-helpers/vue-router",
+        "vuex"
+      ]
     }
   }
 }
