@@ -1,6 +1,6 @@
 # vite-vue2-typescript
 
-Vite Vue2 typescript starter template using composition-api
+Vite Vue2 typescript starter template using composition-api with Script Setup!
 
 ## Features
 
@@ -9,6 +9,8 @@ Vite Vue2 typescript starter template using composition-api
 - 📦 [Global Components auto importing](./src/components/Global)
 
 - 📑 [Layout system](./src/layouts)
+
+- 😃 [Script Setup](https://github.com/antfu/vue2-script-setup-transform)
 
 - 🎨 [Commitlint](./husky)
 
