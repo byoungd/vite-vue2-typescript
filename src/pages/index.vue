@@ -15,5 +15,15 @@
       and
       <el-tag>vue composition-api</el-tag> for Vue2.
     </p>
+    <Test />
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+import Test from '../components/test.vue'
+export default defineComponent({
+  name: 'index-page',
+  components: { Test },
+})
+</script>

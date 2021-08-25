@@ -11,6 +11,7 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-ui/lib/menu-item')['default']
     ElTag: typeof import('element-ui/lib/tag')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    Test: typeof import('./src/components/test.vue')['default']
   }
 }
 
