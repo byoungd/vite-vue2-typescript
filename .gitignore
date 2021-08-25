@@ -11,6 +11,7 @@ static/sw.js
 now.json
 mock
 build
+auto-imports.d.ts
 
 # local env files
 .env.local

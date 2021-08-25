@@ -3,7 +3,8 @@ import * as path from 'path'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
 import { createVuePlugin } from 'vite-plugin-vue2'
-import ScriptSetup from 'vue2-script-setup-transform/vite-plugin'
+import ScriptSetup from 'unplugin-vue2-script-setup/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
@@ -75,7 +76,7 @@ export default ({ command, mode }) => {
         customComponentResolvers: [ElementUiResolver()],
       }),
       Inspect(),
-      // @ts-ignore
+      AutoImport({}),
       ScriptSetup(),
       Layouts({
         layoutsDir: 'src/layouts',

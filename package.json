@@ -14,8 +14,9 @@
     "@vueuse/core": "^4.9.1",
     "core-js": "^3.11.1",
     "element-ui": "^2.15.5",
+    "unplugin-auto-import": "^0.1.4",
+    "unplugin-vue2-script-setup": "^0.4.2",
     "vue": "^2.6.12",
-    "vue-global-api": "^0.4.1",
     "vue-router": "^3.5.1",
     "vue2-helpers": "^1.1.3",
     "vuex": "^3.6.2"
@@ -25,12 +26,11 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "commitlint-config-cz": "^0.13.2",
     "@vue/compiler-sfc": "^3.2.4",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/runtime-dom": "^3.2.4",
-    "vue-demi": "^0.7.5",
+    "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
@@ -51,9 +51,9 @@
     "vite-plugin-vue-layouts": "^0.3.1",
     "vite-plugin-vue2": "^1.4.4",
     "vite-plugin-windicss": "^1.2.7",
-    "windicss": "^3.1.7",
+    "vue-demi": "^0.7.5",
     "vue-template-compiler": "^2.6.14",
-    "vue2-script-setup-transform": "^0.3.4"
+    "windicss": "^3.1.7"
   },
   "lint-staged": {
     "**/**.{js,json,vue,ts}": [
@@ -78,13 +78,14 @@
     "optimizeDeps": {
       "include": [
         "@vue/composition-api",
+        "@vue/runtime-dom",
         "element-ui",
         "element-ui/lib/button",
+        "element-ui/lib/divider",
         "element-ui/lib/menu",
         "element-ui/lib/menu-item",
         "element-ui/lib/tag",
         "vue",
-        "vue-global-api",
         "vue-router",
         "vue2-helpers/vue-router",
         "vuex"

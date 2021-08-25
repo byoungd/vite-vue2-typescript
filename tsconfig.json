@@ -16,7 +16,7 @@
       "vite-plugin-vue-layouts/client",
       "vite-plugin-pages/client",
       "vite/client",
-      "vue2-script-setup-transform/types"
+      "unplugin-vue2-script-setup/types"
     ],
     "paths": {
       "@/*": ["./src*"]

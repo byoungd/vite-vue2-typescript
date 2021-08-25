@@ -1,4 +1,3 @@
-import 'vue-global-api'
 import Vue from 'vue'
 import VCA, { createApp, h } from '@vue/composition-api'
 import router from './router'
