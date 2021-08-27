@@ -76,7 +76,9 @@ export default ({ command, mode }) => {
         customComponentResolvers: [ElementUiResolver()],
       }),
       Inspect(),
-      AutoImport({}),
+      AutoImport({
+        imports: '@vue/composition-api',
+      }),
       ScriptSetup(),
       Layouts({
         layoutsDir: 'src/layouts',

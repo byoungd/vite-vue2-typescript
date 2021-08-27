@@ -16,14 +16,13 @@
       <el-tag>vue composition-api</el-tag> for Vue2.
     </p>
     <Test />
+    <SetupTest :msg="msg" />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+<script setup lang="ts">
 import Test from '../components/test.vue'
-export default defineComponent({
-  name: 'index-page',
-  components: { Test },
-})
+import SetupTest from '../components/SetupTest.vue'
+
+const msg = ref('hello')
 </script>
