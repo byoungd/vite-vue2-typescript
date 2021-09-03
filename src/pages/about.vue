@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div>
+    <div class="m-10">
       <div>
         <h1>About: Vite ⚡ - Vue 2 starter template</h1>
         <p class="mb-8 leading-relaxed dark:text-gray-300">
