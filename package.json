@@ -2,7 +2,6 @@
   "name": "vite-vue2-typescript",
   "private": true,
   "scripts": {
-    "postinstall": "husky install",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
@@ -20,8 +19,6 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
     "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -29,16 +26,11 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/runtime-dom": "^3.2.4",
-    "commitlint-config-cz": "^0.13.2",
-    "cz-customizable": "^6.3.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.1.2",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.1",
     "typescript": "^4.3.5",
     "unplugin-vue-components": "^0.14.11",
     "unplugin-vue2-script-setup": "^0.4.2",
@@ -54,25 +46,6 @@
     "vue-demi": "^0.7.5",
     "vue-template-compiler": "^2.6.14",
     "windicss": "^3.1.7"
-  },
-  "lint-staged": {
-    "**/**.{js,json,vue,ts}": [
-      "eslint --fix --ignore-path .gitignore",
-      "pretty-quick --staged --ignore-path .gitignore"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    },
-    "cz-customizable": {
-      "config": "./.cz-config.js"
-    }
   },
   "vite": {
     "optimizeDeps": {
