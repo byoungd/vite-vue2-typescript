@@ -12,6 +12,7 @@ now.json
 mock
 build
 auto-imports.d.ts
+pnpm-lock.*
 
 # local env files
 .env.local
